@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: #13345E;
+}
+
+:root {}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+/* Reusable styles */
+
+/******* Start header ******/
+header {
+    width: 100%;
+    height: 6rem;
+    overflow: hidden;
+}
+
+/* Header - menu toggler */
+.menu-toggler {
+    background: none;
+    color: #13345E;
+    border: none;
+    padding: 5px;
+    font-size: 2rem;
+    position: absolute;
+    top: .5rem;
+    right: 0;
+}
+
+/* Header - nav */
+#logo {
+    width: 333px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.nav-list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    top: -100vh;
+    transition: .5s;
+}
+
+.nav-list.open {
+    top: 0;
+}
+
+.nav-list li {
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-list li a {
+    display: block;
+    color: #13345E;
+    font-size: 1.5rem;
+    transition: all .5s;
+    padding: 2px;
+    font-weight: 600;
+}
+/******* End header ******/
+
+/****** Start slider ******/
+.slider-box {
+    height: 70vh;
+    position: relative;
+    z-index: -1;
+}
+
+.slide {
+    animation: 12s banner linear infinite both;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide:nth-child(1) {
+    background: url("images/img1.1920x1280.png") center no-repeat;
+    background-size: cover;
+}
+
+.slide:nth-child(2) {
+    background: url("images/img2.1920x1280.png") center no-repeat;
+    background-size: cover;
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    background: url("images/img3.1920x1280.png") center no-repeat;
+    background-size: cover;
+    animation-delay: 8s;
+}
+
+.slider-box h2 {
+    position: absolute;
+    font-size: 1.8rem;
+    color: #ffffff;
+    right: 7vw;
+    top: 12vh;
+    text-align: center;
+    animation: 12s txt linear infinite both;
+}
+
+.slider-box h2:nth-child(5){
+    animation-delay: 4s;
+}
+
+.slider-box h2:nth-child(6){
+    animation-delay: 8s;
+}
+
+@keyframes banner {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    33.01% {
+        opacity: 1;
+    }
+    38.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes txt {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    23.33% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/****** End slider ******/
